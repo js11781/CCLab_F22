@@ -1,0 +1,23 @@
+p{
+    background-color: cadetblue;
+}
+
+span{
+    border-color: blue;
+
+border-width: 3px;
+border-style: dashed;
+}
+
+div{
+    border-color:darkmagenta;
+    border-width: 3px;
+    border-style: double;
+
+}
+
+.emptyDiv{
+height: 40px;
+width: 100px;
+display: inline;
+}

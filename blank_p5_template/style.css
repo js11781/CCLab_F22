@@ -1,0 +1,16 @@
+P{
+    color:red
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+  
+.canvasDiv{
+    /* style canvas container here */
+}
