@@ -1,8 +1,26 @@
-P{
-    color:red
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    color:darkblue;
+    display: flex;
+    justify-content: center;
+    border: medium solid red;
+    border-style:dashed;
+    border-width:0.3ch;
 }
 
-html, body {
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    color: palevioletred;
+    border: medium solid yellowgreen;
+    border-width:0.5ch;
+    text-align: center;
+
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -10,7 +28,12 @@ html, body {
 canvas {
     display: block;
 }
-  
-.canvasDiv{
-    /* style canvas container here */
+
+.canvasDiv {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: skyblue;
 }
