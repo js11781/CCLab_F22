@@ -2,7 +2,8 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     font-size: xx-large;
     color:darkblue;
-    display: flex;
+    text-shadow:orangered;
+display: flex;
     justify-content: center;
     border: medium solid red;
     border-style:dashed;
