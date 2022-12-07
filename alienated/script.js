@@ -10,6 +10,7 @@ function setup() {
 
 function draw() {
   background(127, 212, 224);
+  // console.log(flyingObject.yspd)
   flyingObject.display();
   flyingObject.update();
   if (flyingObject.fall == true) {
@@ -60,6 +61,7 @@ function draw() {
 
   if (flyingObject.x > width + 100) {
     flyingObject.x = -100;
+    flyingObject.y=random(height-300,0)
   }
 }
 
