@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(127, 212, 224);
   // console.log(flyingObject.yspd)
   flyingObject.display();
   flyingObject.update();
