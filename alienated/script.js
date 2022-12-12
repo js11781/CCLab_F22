@@ -3,21 +3,47 @@ let start = 0;
 let ss = 0;
 
 function setup() {
-  let cnv = createCanvas(windowWidth-100, windowHeight-100);
+  let cnv = createCanvas(windowWidth-150, windowHeight-150);
   cnv.parent("canvasContainer")
   flyingObject = new Plane(width - 1250, height - 500);
 }
 
+function sun(){
+  push()
+  stroke(225);
+  fill(225,225,0)
+  
+  beginShape()
+  for(var i=0;i<TWO_PI;i+=0.02){
+    let r=80+random(5,-5)
+    let x=r*cos(i)
+  
+    let y=r*sin(i)
+  
+    vertex(x,y)
+    }
+  endShape(CLOSE)
+  pop()
+}
+
+
+
 function draw() {
+  
   background(127, 212, 224);
-  // console.log(flyingObject.yspd)
+  sun()
   flyingObject.display();
   flyingObject.update();
+  sky1.display();
+  sky1.update();
+  sky2.display();
+  sky2.update();
+  
   if (flyingObject.fall == true) {
-    flyingObject.yspd = -0.5;
+    flyingObject.yspd = -1;
   }
   if (flyingObject.fall == false) {
-    flyingObject.yspd = 0.25;
+    flyingObject.yspd = 1;
   }
 
   push();
@@ -63,6 +89,16 @@ function draw() {
     flyingObject.x = -100;
     flyingObject.y=random(height-300,0)
   }
+  
+  
+  if(sky1.x>width+100){
+    sky1.x=-10
+    sky1.xspd=random(0.5,3)
+  }
+  if(sky2.x>width+100){
+    sky2.x=-10
+    sky2.xspd=random(0.5,3)
+  }
 }
 
 class Plane {
@@ -106,7 +142,33 @@ class Plane {
     pop();
   }
 }
+class Cloud{
+  constructor(startX, startY) {
+    this.x = startX;
+    this.y = startY;
+    this.yspd = 0;
+    this.xspd=0.5
 
+  }
+  update() {
+    this.x += this.xspd;
+   
+}
+  display() {
+  push()
+  translate(this.x, this.y);
+  // scale(0.6)
+  fill(255)
+  noStroke()
+  ellipse(0,0,100,60)
+  ellipse(30,0,80,60)
+  ellipse(10,-20,80,40)
+  pop()
+  }
+  
+}
+
+  
 function mousePressed() {
   ss += 1;
 
