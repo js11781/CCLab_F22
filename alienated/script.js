@@ -151,7 +151,7 @@ class Cloud{
     this.x = startX;
     this.y = startY;
     this.yspd = 0;
-    this.xspd=0.5
+    this.xspd=0.3
 
   }
   update() {
