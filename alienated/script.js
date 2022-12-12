@@ -6,6 +6,10 @@ function setup() {
   let cnv = createCanvas(windowWidth-150, windowHeight-150);
   cnv.parent("canvasContainer")
   flyingObject = new Plane(width - 1250, height - 500);
+  sky1 = new Cloud(width/2, height/9+100);
+  sky2 = new Cloud(0, height/9);
+
+
 }
 
 function sun(){
